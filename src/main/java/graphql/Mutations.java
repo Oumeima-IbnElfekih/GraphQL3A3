@@ -17,4 +17,16 @@ public class Mutations implements GraphQLRootResolver {
         Option o=new Option(codeOption,libelle,domaine,responsable,credits,capacite,semestre);
       return   optionBusiness.addOption(o);
     }
+
+    public Boolean modifierOption(int codeOption, String libelle,
+                        String domaine, String responsable,
+                        int credits, int capacite, int semestre) {
+       Option o= new Option(codeOption,libelle,domaine,responsable,credits,capacite,semestre);
+       return optionBusiness.updateOption(codeOption,o);
+    }
+    public String supprimerOption(int code) {
+        if( optionBusiness.deleteOption(code))
+            return "Supprimer Option";
+        return "Erreur";
+    }
 }
