@@ -27,7 +27,7 @@ type Mutations {
     modifierOption(codeOption:Int,
         libelle:String,domaine:String,
         responsable:String,credits:Int,capacite:Int,
-        semestre:Int):Boolean
+        semestre:Int):Option
     supprimerOption(code:Int):String
 }
 schema {
