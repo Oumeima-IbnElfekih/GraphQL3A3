@@ -18,7 +18,7 @@ public class GraphQLEndPoint extends SimpleGraphQLServlet {
         EtudiantBusiness   etB = new EtudiantBusiness();
         return SchemaParser.newParser()
                 .file("schema.graphql")
-                .resolvers(new Queries(opB,etB), new Mutations(opB))
+                .resolvers(new Queries(opB,etB), new Mutations(opB,etB))
                 .build()
                 .makeExecutableSchema();
     }

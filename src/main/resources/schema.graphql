@@ -29,6 +29,8 @@ type Mutations {
         responsable:String,credits:Int,capacite:Int,
         semestre:Int):Option
     supprimerOption(code:Int):String
+    supprimerEtudiant(id:String):String
+    modifierEtudiant(id:String,nom:String,prenom:String,codeOption:Int,anneEtude:Int,email:String):Boolean
 }
 schema {
     query: Queries
